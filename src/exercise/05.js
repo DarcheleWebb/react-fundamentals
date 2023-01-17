@@ -16,7 +16,7 @@ import '../box-styles.css'
 
 function Box({className, style, children}) {
   return (
-    <div className={className} style={style}>
+    <div className={`box ${className}`} style={style}>
       {children}
     </div>
   )
