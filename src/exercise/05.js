@@ -14,9 +14,9 @@ import '../box-styles.css'
 // 🐨 also use the style prop to make the font italic
 // 💰 Here are available style attributes: backgroundColor, fontStyle
 
-function Box({className = '', style, children}) {
+function Box({size, style, children}) {
   return (
-    <div className={`box ${className}`} style={{fontStyle: 'italic', ...style}}>
+    <div className={`box box--${size}`} style={{fontStyle: 'italic', ...style}}>
       {children}
     </div>
   )
@@ -25,13 +25,13 @@ function Box({className = '', style, children}) {
 function App() {
   return (
     <div>
-      <Box className="box--small" style={{backgroundColor: 'lightblue'}}>
+      <Box size="small" style={{backgroundColor: 'lightblue'}}>
         small lightblue box
       </Box>
-      <Box className="box--medium" style={{backgroundColor: 'pink'}}>
+      <Box size="medium" style={{backgroundColor: 'pink'}}>
         medium pink box
       </Box>      
-      <Box className="box--large" style={{backgroundColor: 'orange'}}>
+      <Box size="large" style={{backgroundColor: 'orange'}}>
         large orange box
       </Box>      
 
